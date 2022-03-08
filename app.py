@@ -1,4 +1,3 @@
-import array
 raeume = []
 raumgroeßen = []
 raumzahl = int(input("Wieviele Räume gibt es?\n"))
