@@ -11,25 +11,25 @@ while raumzahl > 0:
         if viereck == "y":
             quadrat = str(input("Ist der Raum quadratisch? [y/n]\n"))
             if quadrat == "y":
-                length = int(input("Wandlänge?\n"))
+                length = float(input("Wandlänge?\n"))
                 length = length * 4
                 raeume.append(length)
                 raumgroeßen.append(length)
                 print(length)
                 raumzahl = raumzahl -1
             else:
-                wallA = int(input("Gib die Länge von Wand A an\n"))
-                wallB = int(input("Gib die Länge von Wand B an\n"))
+                wallA = float(input("Gib die Länge von Wand A an\n"))
+                wallB = float(input("Gib die Länge von Wand B an\n"))
                 flaeche = wallA * wallB
                 raeume.append(flaeche)
                 raumgroeßen.append(flaeche)
                 print (flaeche)
                 raumzahl = raumzahl -1
         else:
-            bigA = int(input("Größte Wandlänge? \n"))
-            bigB = int(input("Größte Wandbreite?\n"))
-            smallA = int(input("Kleinste Wandlänge?\n"))
-            smallB = int(input("Kleinste Wandbreite?\n"))
+            bigA = float(input("Größte Wandlänge? \n"))
+            bigB = float(input("Größte Wandbreite?\n"))
+            smallA = float(input("Kleinste Wandlänge?\n"))
+            smallB = float(input("Kleinste Wandbreite?\n"))
             flaecheA = bigA * bigB
             flaecheB = smallA * smallB
             flaeche = flaecheA - flaecheB
@@ -38,9 +38,9 @@ while raumzahl > 0:
             print (flaeche)
             raumzahl = raumzahl -1
     elif tempinput == 2:
-        if int(sum(raeume)) > 0:
+        if float(sum(raeume)) > 0:
             print(raeume)
         else:
             print("Keine Räume vorhanden!") 
 print (raeume)
-print ("Summe aller Räume: ", int(sum(raumgroeßen)))
+print ("Summe aller Räume: ", float(sum(raumgroeßen)))
