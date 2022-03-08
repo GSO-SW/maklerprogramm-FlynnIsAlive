@@ -15,7 +15,7 @@ while raumzahl > 0:
                 raeume.append(length)
                 raumgroeßen.append(length)
                 print(length)
-                raumzahl = raumzahl -1
+                raumzahl -= 1
             else:
                 wallA = float(input("Gib die Länge von Wand A an\n"))
                 wallB = float(input("Gib die Länge von Wand B an\n"))
@@ -23,7 +23,7 @@ while raumzahl > 0:
                 raeume.append(flaeche)
                 raumgroeßen.append(flaeche)
                 print (flaeche)
-                raumzahl = raumzahl -1
+                raumzahl -= 1
         else:
             bigA = float(input("Größte Wandlänge? \n"))
             bigB = float(input("Größte Wandbreite?\n"))
@@ -35,9 +35,9 @@ while raumzahl > 0:
             raeume.append(flaeche)
             raumgroeßen.append(flaeche)
             print (flaeche)
-            raumzahl = raumzahl -1
+            raumzahl -= 1
     elif tempinput == 2:
-        if float(sum(raeume)) > 0:
+        if len(raeume) > 0:
             print(raeume)
         else:
             print("Keine Räume vorhanden!") 
